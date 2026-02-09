@@ -166,7 +166,8 @@
     display: none;
 }
 
-.chat-container:has(.message:not(.welcome)) .chat-input-container {
+.chat-container:has(.message:not(.welcome)) .chat-input-container,
+.chat-container.has-messages .chat-input-container {
     position: absolute;
     left: 50%;
     bottom: 28px;
@@ -179,6 +180,7 @@
     margin-top: 0;
 }
 
-.chat-container:has(.message:not(.welcome)) .chat-input-wrapper {
+.chat-container:has(.message:not(.welcome)) .chat-input-wrapper,
+.chat-container.has-messages .chat-input-wrapper {
     background: var(--panel-elevated);
 }

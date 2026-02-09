@@ -17,14 +17,16 @@
     text-align: center;
 }
 
-.chat-messages:has(.message:not(.welcome)) {
+.chat-messages:has(.message:not(.welcome)),
+.chat-container.has-messages .chat-messages {
     align-items: stretch;
     justify-content: flex-start;
     text-align: left;
     padding: 96px 24px 160px;
 }
 
-.chat-messages:has(.message:not(.welcome)) .message.welcome {
+.chat-messages:has(.message:not(.welcome)) .message.welcome,
+.chat-container.has-messages .chat-messages .message.welcome {
     display: none;
 }
 
