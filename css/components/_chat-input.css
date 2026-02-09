@@ -1,0 +1,184 @@
+/* ===========================================
+   CHAT INPUT - Input Component
+   Styles untuk area input pesan chat
+   =========================================== */
+
+/* ----- Input Container ----- */
+.chat-input-container {
+    padding: 0;
+    background: transparent;
+    border-top: none;
+    position: absolute;
+    left: 50%;
+    top: 56%;
+    transform: translate(-50%, 0);
+    width: min(720px, 90vw);
+    z-index: 5;
+}
+
+/* ----- Input Wrapper ----- */
+.chat-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 18px;
+    border-radius: 20px;
+    /* border: 1px solid var(--border-color); */
+    background: rgba(44, 46, 52, 0.98);
+    box-shadow: 0 18px 40px -28px rgba(0, 0, 0, 0.8);
+    /* border-color: rgba(255, 255, 255, 0.08); */
+
+}
+
+.chat-input-wrapper:focus-within {
+    border-color: rgba(91, 134, 255, 0.7);
+    box-shadow: 0 0 0 3px rgba(91, 134, 255, 0.18);
+}
+
+/* ----- Text Input ----- */
+.chat-input {
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    font-family: inherit;
+    resize: none;
+    outline: none;
+    transition: var(--transition);
+    min-height: 44px;
+    max-height: 160px;
+    background: transparent;
+    color: var(--text-primary);
+}
+
+.chat-input::placeholder {
+    color: var(--text-muted);
+}
+
+.chat-input:focus {
+    box-shadow: none;
+}
+
+/* ----- Send Button ----- */
+.composer-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.composer-chips {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.composer-chip {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: var(--text-secondary);
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.composer-chip:hover {
+    border-color: rgba(91, 134, 255, 0.6);
+    color: var(--text-primary);
+}
+
+.composer-chip svg {
+    width: 14px;
+    height: 14px;
+}
+
+.composer-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.icon-btn:hover {
+    border-color: rgba(91, 134, 255, 0.5);
+    color: var(--text-primary);
+}
+
+.icon-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.send-btn {
+    width: 36px;
+    height: 36px;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 999px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.send-btn:hover:not(:disabled) {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.send-btn:disabled {
+    background: var(--text-muted);
+    cursor: not-allowed;
+}
+
+.send-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ----- Input Hint ----- */
+.input-hint {
+    display: none;
+}
+
+.chat-container:has(.message:not(.welcome)) .chat-input-container {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    top: auto;
+    transform: translate(-50%, 0);
+    width: min(760px, 90vw);
+    padding: 0;
+    background: transparent;
+    border-top: none;
+    margin-top: 0;
+}
+
+.chat-container:has(.message:not(.welcome)) .chat-input-wrapper {
+    background: var(--panel-elevated);
+}

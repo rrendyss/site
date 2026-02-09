@@ -1,0 +1,44 @@
+/* ===========================================
+   MAIN - Main Entry Point
+   File utama yang mengimport semua modul CSS
+   
+   Struktur Modular CSS:
+   1. Variables   - Custom properties
+   2. Reset       - Reset browser styles
+   3. Base        - Base styles
+   4. Layout      - Layout & containers
+   5. Components - Komponen UI
+   6. Markdown    - Markdown styling
+   7. Responsive - Media queries
+   8. Accessibility - A11y styles
+   9. Dark Mode   - Dark mode support
+   =========================================== */
+
+/* ----- Layer 1: Variables & Reset ----- */
+@import '_variables.css';
+@import '_reset.css';
+@import '_base.css';
+
+/* ----- Layer 2: Layout ----- */
+@import '_layout.css';
+
+/* ----- Layer 3: Components ----- */
+@import 'components/_chat-header.css';
+@import 'components/_chat-messages.css';
+@import 'components/_message.css';
+@import 'components/_streaming.css';
+@import 'components/_tool-calls.css';
+@import 'components/_chat-input.css';
+@import 'components/_loading-overlay.css';
+@import 'components/_toast.css';
+
+/* ----- Layer 4: Markdown ----- */
+@import 'markdown/_code.css';
+@import 'markdown/_tables.css';
+@import 'markdown/_typography.css';
+
+/* ----- Layer 5: Utilities ----- */
+@import '_responsive.css';
+@import '_accessibility.css';
+@import '_dark-mode.css';
+

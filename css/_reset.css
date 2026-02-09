@@ -1,0 +1,50 @@
+/* ===========================================
+   RESET - Reset Styles
+   Reset browser default styles untuk
+   konsistensi antar browser
+   =========================================== */
+
+/* Reset universal untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset margin default untuk heading dan paragraph */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+/* Reset list styles */
+ul, ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Reset link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Reset button styles */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Reset input styles */
+input, textarea {
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+/* Reset table borders */
+table {
+    border-collapse: collapse;
+}
+

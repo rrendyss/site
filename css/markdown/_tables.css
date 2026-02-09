@@ -1,0 +1,37 @@
+/* ===========================================
+   TABLES - Markdown Table Styling
+   Styles untuk tabel markdown
+   =========================================== */
+
+/* ----- Table Container ----- */
+.markdown-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 12px;
+}
+
+/* ----- Table Headers & Cells ----- */
+.markdown-table th,
+.markdown-table td {
+    border: 1px solid var(--border-color);
+    padding: 10px 12px;
+    text-align: left;
+}
+
+/* ----- Table Header ----- */
+.markdown-table th {
+    background: var(--secondary-color);
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+/* ----- Zebra Striping ----- */
+.markdown-table tr:nth-child(even) {
+    background: var(--secondary-color);
+}
+
+/* ----- Hover Effect ----- */
+.markdown-table tr:hover {
+    background: rgba(91, 134, 255, 0.08);
+}

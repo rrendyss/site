@@ -1,0 +1,26 @@
+/* ===========================================
+   BASE - Base Styles
+   Style dasar untuk body dan elemen global
+   =========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+body {
+    /* Font utama */
+    font-family: 'Sora', sans-serif;
+
+    /* Background netral ala ChatGPT */
+    background: var(--app-bg);
+
+    /* Tinggi minimum viewport */
+    min-height: 100vh;
+
+    /* Warna teks utama */
+    color: var(--text-primary);
+
+    /* Line height standar untuk keterbacaan */
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}

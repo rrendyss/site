@@ -1,0 +1,45 @@
+/* ===========================================
+   TOOL CALLS - Tool Calls Component
+   Styles untuk tampilan tool calls
+   =========================================== */
+
+/* ----- Tool Calls Container ----- */
+/* .toolcall-item {
+  margin-top: 6px;
+  padding: 4px 6px;
+  background: rgba(124,124,255,0.06);
+  border-radius: 6px;
+  font-size: 12px;
+} */
+
+/* .toolcall-summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.toolcall-summary::-webkit-details-marker {
+  display: none;
+}
+
+.toolcall-args {
+  margin-top: 6px;
+  padding: 6px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 6px;
+  font-family: monospace;
+  white-space: pre-wrap;
+} */
+
+/* ----- Tool Call Label (Inline) ----- */
+.toolcall-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.06);
+}

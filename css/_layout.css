@@ -1,0 +1,31 @@
+/* ===========================================
+   LAYOUT - Layout & Container Styles
+   Struktur layout utama aplikasi
+   =========================================== */
+
+/* ----- App Container ----- */
+/* Container utama untuk menengahkan konten */
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    padding: 0;
+    background: var(--app-bg);
+}
+
+/* ----- Chat Container ----- */
+/* Container utama untuk komponen chat */
+.chat-container {
+    width: 100%;
+    height: 100vh;
+    max-height: none;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;          /* Batasi overflow */
+    position: relative;
+}

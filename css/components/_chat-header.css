@@ -1,0 +1,101 @@
+/* ===========================================
+   CHAT HEADER - Header Component
+   Styles untuk bagian header chat
+   =========================================== */
+
+/* ----- Header Container ----- */
+.chat-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+/* ----- Header Content ----- */
+.chat-header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ----- Avatar ----- */
+.brand-mark {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.brand-mark svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* ----- Title Section ----- */
+.chat-title {
+    display: none;
+}
+
+.chat-title h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    letter-spacing: -0.2px;
+}
+
+/* ----- Status Indicator ----- */
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    margin-top: 4px;
+    box-shadow: 0 0 0 4px rgba(91, 134, 255, 0.12);
+}
+
+.header-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+}
+
+.header-pill button svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ----- Clear Button ----- */
+.clear-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 999px;
+    transition: var(--transition);
+}
+
+.clear-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--text-primary);
+}
+
+.clear-btn svg {
+    width: 18px;
+    height: 18px;
+}

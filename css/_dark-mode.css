@@ -1,0 +1,320 @@
+/* ===========================================
+   DARK MODE - Dark Mode Support
+   Styles untuk dark mode (auto & manual)
+   Mendukung prefers-color-scheme dan class .dark-mode
+   =========================================== */
+
+/* ============================================
+   DARK MODE - Automatic (System Preference)
+   Menggunakan media query prefers-color-scheme
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    /* ----- Variables Override ----- */
+    :root {
+        --primary-color: #5b86ff;
+        --primary-dark: #416ef5;
+        --primary-light: #8fb0ff;
+        --secondary-color: #141416;
+        --app-bg: #0f1012;
+        --panel-bg: #141416;
+        --panel-elevated: #1b1c1f;
+        --bubble-user: #2a2b30;
+        --bubble-assistant: transparent;
+        --accent-color: #1b2333;
+        --accent-rgb: 27, 35, 51;
+        --text-primary: #e6e7ea;
+        --text-secondary: #b4b7c2;
+        --text-muted: #7a7f8a;
+        --border-color: #272a31;
+        --success-color: #3dd598;
+        --success-rgb: 61, 213, 152;
+        --error-color: #ef4444;
+        --error-rgb: 239, 68, 68;
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.35);
+        --shadow-md: 0 10px 25px -10px rgb(0 0 0 / 0.6);
+        --shadow-lg: 0 24px 50px -30px rgb(0 0 0 / 0.75);
+    }
+
+    /* ----- Body ----- */
+    body {
+        background: var(--app-bg);
+    }
+
+    /* ----- Chat Container ----- */
+    .chat-container {
+        background: var(--panel-bg);
+        border: 1px solid var(--border-color);
+    }
+
+    /* ----- Chat Header ----- */
+    .chat-header {
+        background: var(--panel-bg);
+        border-bottom-color: var(--border-color);
+    }
+
+    .chat-header h2 {
+        color: var(--text-primary);
+    }
+
+    /* ----- Chat Messages ----- */
+    .chat-messages {
+        background: var(--app-bg);
+    }
+
+    /* ----- Message Bubbles ----- */
+    .message.bot .message-bubble {
+        background: transparent;
+        color: var(--text-primary);
+    }
+
+    .message.user .message-bubble {
+        background: var(--bubble-user);
+        color: var(--text-primary);
+    }
+
+    /* ----- Buttons ----- */
+    .clear-btn:hover {
+        background: var(--secondary-color);
+    }
+
+    /* ----- Chat Input ----- */
+    .chat-input {
+        background: transparent;
+        color: var(--text-primary);
+    }
+
+    .chat-input:focus {
+        border-color: var(--primary-color);
+    }
+
+    .chat-input-container {
+        background: var(--panel-bg);
+        border-top-color: var(--border-color);
+    }
+
+    /* ----- Typing Indicator ----- */
+    .typing-indicator {
+        background: var(--panel-bg);
+        border-top-color: var(--border-color);
+    }
+
+    .typing-bubble {
+        background: var(--bubble-user);
+    }
+
+    /* ----- Tables ----- */
+    .markdown-table th {
+        background: var(--panel-elevated);
+        color: var(--text-primary);
+    }
+
+    .markdown-table tr:nth-child(even) {
+        background: var(--panel-elevated);
+    }
+
+    /* ----- Blockquotes ----- */
+    .quote-block {
+        background: var(--panel-elevated);
+        color: var(--text-secondary);
+    }
+
+    /* ----- Inline Code ----- */
+    .inline-code,
+    .message-bubble code:not(.inline-code) {
+        background: rgba(91, 134, 255, 0.2);
+        color: #8fb0ff;
+    }
+
+    /* ----- Tool Calls ----- */
+    .tool-call {
+        background: linear-gradient(135deg, #1b1c1f 0%, #141416 100%);
+        border-color: #272a31;
+    }
+
+    .tool-call-args {
+        background: rgba(0, 0, 0, 0.3);
+        color: var(--text-secondary);
+    }
+
+    /* ----- Loading Overlay ----- */
+    .loading-overlay {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    /* ----- Toast ----- */
+    .toast-error {
+        background: #1e293b;
+        color: #fca5a5;
+        border-left-color: #ef4444;
+    }
+
+    .toast-close {
+        color: var(--text-muted);
+    }
+
+    /* ----- Scrollbar ----- */
+    ::-webkit-scrollbar-thumb {
+        background: #334155;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+    }
+}
+
+/* ============================================
+   DARK MODE - Manual (Class-based)
+   Diaktifkan dengan menambahkan class .dark-mode
+   pada elemen body
+   ============================================ */
+body.dark-mode {
+    /* ----- Variables Override ----- */
+    --primary-color: #5b86ff;
+    --primary-dark: #416ef5;
+    --primary-light: #8fb0ff;
+    --secondary-color: #141416;
+    --app-bg: #0f1012;
+    --panel-bg: #141416;
+    --panel-elevated: #1b1c1f;
+    --bubble-user: #2a2b30;
+    --bubble-assistant: transparent;
+    --accent-color: #1b2333;
+    --accent-rgb: 27, 35, 51;
+    --text-primary: #e6e7ea;
+    --text-secondary: #b4b7c2;
+    --text-muted: #7a7f8a;
+    --border-color: #272a31;
+    --success-color: #3dd598;
+    --success-rgb: 61, 213, 152;
+    --error-color: #ef4444;
+    --error-rgb: 239, 68, 68;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.35);
+    --shadow-md: 0 10px 25px -10px rgb(0 0 0 / 0.6);
+    --shadow-lg: 0 24px 50px -30px rgb(0 0 0 / 0.75);
+}
+
+/* ----- Body ----- */
+body.dark-mode {
+    background: var(--app-bg);
+}
+
+/* ----- Chat Container ----- */
+body.dark-mode .chat-container {
+    background: transparent;
+    border: none;
+}
+
+/* ----- Chat Header ----- */
+body.dark-mode .chat-header {
+    background: transparent;
+    border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .chat-header h2 {
+    color: var(--text-primary);
+}
+
+/* ----- Chat Messages ----- */
+body.dark-mode .chat-messages {
+    background: var(--app-bg);
+}
+
+/* ----- Message Bubbles ----- */
+body.dark-mode .message.bot .message-bubble {
+    background: transparent;
+    color: var(--text-primary);
+}
+
+body.dark-mode .message.user .message-bubble {
+    background: var(--bubble-user);
+    color: var(--text-primary);
+}
+
+/* ----- Buttons ----- */
+body.dark-mode .clear-btn:hover {
+    background: var(--secondary-color);
+}
+
+/* ----- Chat Input ----- */
+body.dark-mode .chat-input {
+    background: transparent;
+    color: var(--text-primary);
+}
+
+body.dark-mode .chat-input:focus {
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .chat-input-container {
+    background: var(--panel-bg);
+    border-top-color: var(--border-color);
+}
+
+/* ----- Typing Indicator ----- */
+body.dark-mode .typing-indicator {
+    background: var(--panel-bg);
+    border-top-color: var(--border-color);
+}
+
+body.dark-mode .typing-bubble {
+    background: var(--bubble-user);
+}
+
+/* ----- Tables ----- */
+body.dark-mode .markdown-table th {
+    background: var(--panel-elevated);
+    color: var(--text-primary);
+}
+
+body.dark-mode .markdown-table tr:nth-child(even) {
+    background: var(--panel-elevated);
+}
+
+/* ----- Blockquotes ----- */
+body.dark-mode .quote-block {
+    background: var(--panel-elevated);
+    color: var(--text-secondary);
+}
+
+/* ----- Inline Code ----- */
+body.dark-mode .inline-code,
+body.dark-mode .message-bubble code:not(.inline-code) {
+    background: rgba(91, 134, 255, 0.2);
+    color: #8fb0ff;
+}
+
+/* ----- Tool Calls ----- */
+body.dark-mode .tool-call {
+    background: linear-gradient(135deg, #1b1c1f 0%, #141416 100%);
+    border-color: #272a31;
+}
+
+body.dark-mode .tool-call-args {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--text-secondary);
+}
+
+/* ----- Loading Overlay ----- */
+body.dark-mode .loading-overlay {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* ----- Toast ----- */
+body.dark-mode .toast-error {
+    background: var(--panel-elevated);
+    color: #fca5a5;
+    border-left-color: #ef4444;
+}
+
+body.dark-mode .toast-close {
+    color: var(--text-muted);
+}
+
+/* ----- Scrollbar ----- */
+body.dark-mode ::-webkit-scrollbar-thumb {
+    background: #2f3238;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #3b3f47;
+}

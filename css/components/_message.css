@@ -1,0 +1,152 @@
+/* ===========================================
+   MESSAGE - Message Bubble Component
+   Styles untuk bubble pesan user dan bot
+   =========================================== */
+
+/* ----- Message Container ----- */
+.message {
+    display: flex;
+    gap: 16px;
+    width: min(720px, 90vw);
+    align-self: center;
+    margin: 0 auto;
+}
+
+.message.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+    margin-left: auto;
+    max-width: 520px;
+}
+
+.message.bot {
+    /* align-self: flex-start; */
+    margin-right: auto;
+}
+
+/* ----- Message Avatar ----- */
+.message-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.message.user .message-avatar {
+    display: none;
+}
+
+.message.bot .message-avatar {
+    display: none;
+}
+
+/* ----- Message Content ----- */
+.message-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    /* flex: 1; */
+}
+
+.message.user .message-content {
+    align-items: flex-end;
+}
+
+/* ----- Message Bubble ----- */
+.message-bubble {
+    padding: 0;
+    border-radius: 0;
+    max-width: 100%;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.message.user .message-bubble {
+    background: var(--bubble-user);
+    color: var(--text-primary);
+    padding: 10px 14px;
+    border-radius: 14px;
+}
+
+.message.bot .message-bubble {
+    background: var(--bubble-assistant);
+    color: var(--text-primary);
+    box-shadow: none;
+}
+
+/* ----- Message Meta (Time & Tools) ----- */
+.message-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0 0;
+}
+
+.message.user .message-meta {
+    flex-direction: row-reverse;
+}
+
+.message-time {
+    font-size: 11px;
+    color: var(--text-muted);
+    display: none;
+}
+
+/* ----- Welcome Hero ----- */
+.message.welcome {
+    margin: 0;
+}
+
+.welcome-hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    padding: 0;
+}
+
+.welcome-icon {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.welcome-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.welcome-hero h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* ----- Typing Cursor Animation ----- */
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.typing-cursor {
+    position: relative;
+}
+
+.typing-cursor::after {
+    content: '|';
+    animation: blink 1s step-start infinite;
+    margin-left: 2px;
+    color: var(--text-primary);
+}
+
+.typing-content {
+    display: inline;
+}

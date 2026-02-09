@@ -1,0 +1,52 @@
+/* ===========================================
+   VARIABLES - Custom Properties
+   Definisi variabel CSS untuk konsistensi
+   warna, spacing, dan design tokens
+   =========================================== */
+
+/* ----- Warna Utama (Primary Colors) ----- */
+:root {
+    /* Warna primer - Biru elektrik */
+    --primary-color: #5b86ff;
+    --primary-dark: #416ef5;
+    --primary-light: #8fb0ff;
+
+    /* Warna aksen - Biru gelap */
+    --accent-color: #1b2333;
+    --accent-rgb: 27, 35, 51;
+
+    /* Warna status */
+    --success-color: #3dd598;
+    --success-rgb: 61, 213, 152;
+    --error-color: #f97070;
+    --error-rgb: 249, 112, 112;
+
+    /* Warna background */
+    --secondary-color: #141416;
+    --app-bg: #0b0c10;
+    --panel-bg: #141416;
+    --panel-elevated: #1b1c1f;
+
+    /* Bubble */
+    --bubble-user: #2a2b30;
+    --bubble-assistant: transparent;
+
+    /* ----- Warna Teks ----- */
+    --text-primary: #e6e7ea;
+    --text-secondary: #b4b7c2;
+    --text-muted: #7a7f8a;
+
+    /* ----- Warna Border ----- */
+    --border-color: #24262d;
+
+    /* ----- Border Radius ----- */
+    --border-radius: 18px;
+
+    /* ----- Shadows ----- */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.35);
+    --shadow-md: 0 10px 25px -10px rgb(0 0 0 / 0.6);
+    --shadow-lg: 0 24px 50px -30px rgb(0 0 0 / 0.75);
+
+    /* ----- Transitions ----- */
+    --transition: all 0.2s ease-in-out;
+}

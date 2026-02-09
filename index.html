@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niche Chat</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Chat Container -->
+        <div class="chat-container" id="chat-container">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="chat-header-content">
+                    <div class="brand-mark">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12c0 4.4 2.86 8.13 6.84 9.45.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.36-1.34-3.36-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.58 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48C19.14 20.13 22 16.4 22 12c0-5.52-4.48-10-10-10z"/>
+                        </svg>
+                    </div>
+                    <div class="chat-title">
+                        <h2>Niche</h2>
+                        <span class="status-dot"></span>
+                    </div>
+                </div>
+                <div class="header-pill">
+                    <button class="dark-mode-toggle" id="dark-mode-toggle" title="Toggle dark mode">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="8" height="16" rx="2"></rect>
+                            <rect x="13" y="6" width="8" height="12" rx="2"></rect>
+                        </svg>
+                    </button>
+                    <button class="clear-btn" id="clear-chat-btn" title="Hapus chat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Messages Area -->
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot welcome">
+                    <div class="message-content">
+                        <div class="welcome-hero">
+                            <span class="welcome-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12c0 4.4 2.86 8.13 6.84 9.45.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.36-1.34-3.36-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.58 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48C19.14 20.13 22 16.4 22 12c0-5.52-4.48-10-10-10z"/>
+                                </svg>
+                            </span>
+                            <h1>How can I help you?</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Input Area -->
+            <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                    <textarea 
+                        class="chat-input" 
+                        id="chat-input" 
+                        placeholder="Message Niche..."
+                        rows="1"
+                    ></textarea>
+                    <div class="composer-actions">
+                        <div class="composer-chips">
+                            <button class="composer-chip" type="button">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+                                </svg>
+                                DeepThink
+                            </button>
+                            <button class="composer-chip" type="button">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="7"></circle>
+                                    <path d="M21 21l-4.3-4.3"></path>
+                                </svg>
+                                Search
+                            </button>
+                        </div>
+                        <div class="composer-buttons">
+                            <button class="icon-btn" type="button" aria-label="Attach">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21.44 11.05l-8.49 8.49a5 5 0 0 1-7.07-7.07l8.49-8.49a3 3 0 0 1 4.24 4.24l-8.49 8.49a1 1 0 0 1-1.41-1.41l7.78-7.78"></path>
+                                </svg>
+                            </button>
+                            <button class="send-btn" id="send-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-hint">
+                    Tekan Enter untuk mengirim, Shift+Enter untuk baris baru
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Memuat aplikasi...</p>
+    </div>
+    
+    <!-- Error Toast -->
+    <div class="toast toast-error" id="error-toast" style="display: none;">
+        <span class="toast-icon">⚠️</span>
+        <span class="toast-message" id="toast-message"></span>
+        <button class="toast-close" id="toast-close">&times;</button>
+    </div>
+
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

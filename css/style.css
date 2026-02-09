@@ -1,0 +1,14 @@
+/* ===========================================
+   STYLE.CSS - Legacy Redirect
+   File ini dialihkan ke main.css untuk 
+   kompatibilitas mundur
+   
+   ⚠️ PERINGATAN: File ini sudah tidak digunakan!
+   Gunakan 'main.css' sebagai gantinya.
+   
+   Redirect ke modular CSS...
+   =========================================== */
+
+/* Redirect semua styles ke file modular */
+@import 'main.css';
+

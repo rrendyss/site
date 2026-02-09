@@ -1,0 +1,76 @@
+/* ===========================================
+   RESPONSIVE - Responsive Design
+   Media queries untuk berbagai ukuran layar
+   =========================================== */
+
+/* ----- Tablet (max-width: 768px) ----- */
+@media (max-width: 768px) {
+    #app {
+        padding: 0;
+    }
+
+    .chat-container {
+        height: 100vh;
+        max-height: none;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .chat-messages {
+        padding: 16px;
+    }
+
+    .message {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .message.user {
+        max-width: 100%;
+    }
+
+    .chat-input-container {
+        width: min(92vw, 640px);
+        top: 56%;
+    }
+}
+
+/* ----- Mobile (max-width: 480px) ----- */
+@media (max-width: 480px) {
+    .chat-header {
+        top: 12px;
+        left: 12px;
+    }
+
+    .chat-messages {
+        padding: 96px 16px 28px;
+        gap: 12px;
+    }
+
+    .message-bubble {
+        padding: 10px 14px;
+        font-size: 15px;
+    }
+
+    .chat-input {
+        font-size: 14px; /* Prevent zoom on iOS */
+    }
+}
+
+/* ----- Print Styles ----- */
+@media print {
+    body {
+        background: white;
+    }
+
+    .chat-container {
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+    }
+
+    .chat-input-container,
+    .loading-overlay,
+    .toast {
+        display: none !important;
+    }
+}
