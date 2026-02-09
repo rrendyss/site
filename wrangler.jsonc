@@ -1,15 +1,14 @@
 {
-  "name": "<WORKER_NAME>",
-  "main": "js/index.js",
-  "compatibility_date": "<COMPATIBILITY_DATE>",
+  "name": "site",
+  "main": "worker.js",
+  "compatibility_date": "2026-02-09",
   "compatibility_flags": [
     "global_fetch_strictly_public"
   ],
   "assets": {
     // The path to the directory containing the `index.html` file to be served at `/`
     "directory": "./public",
-    // The path to the directory containing other static assets to be served at `/static/*`
-    "bucket": "./pkg"
+    "binding": "ASSETS"
   },
   "observability": {
     "enabled": true
