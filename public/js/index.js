@@ -1,9 +1,7 @@
 // index.js
 
 // Import both the default init function (WASM initialization) and named exports
-import init, { init_app, start, WebMarkdownParser } from '../pkg/app.js';
-
-export { WebMarkdownParser };
+import init, { init_app } from '../pkg/app.js';
 
 // Setup copy buttons and dark mode toggle after DOM is ready
 function setupMarkdownFeatures() {

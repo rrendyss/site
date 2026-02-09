@@ -12,7 +12,7 @@
         <!-- Chat Container -->
         <div class="chat-container" id="chat-container">
             <!-- Header -->
-            <div class="chat-header">
+            <header class="chat-header">
                 <div class="chat-header-content">
                     <div class="brand-mark">
                         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -37,7 +37,7 @@
                         </svg>
                     </button>
                 </div>
-            </div>
+            </header>
             
             <!-- Messages Area -->
             <div class="chat-messages" id="chat-messages">
@@ -87,7 +87,7 @@
                                     <path d="M21.44 11.05l-8.49 8.49a5 5 0 0 1-7.07-7.07l8.49-8.49a3 3 0 0 1 4.24 4.24l-8.49 8.49a1 1 0 0 1-1.41-1.41l7.78-7.78"></path>
                                 </svg>
                             </button>
-                            <button class="send-btn" id="send-btn">
+                            <button class="send-btn" id="send-btn" type="button" aria-label="Send Message">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="22" y1="2" x2="11" y2="13"></line>
                                     <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
@@ -110,7 +110,7 @@
     </div>
     
     <!-- Error Toast -->
-    <div class="toast toast-error" id="error-toast" style="display: none;">
+    <div class="toast toast-error" id="error-toast">
         <span class="toast-icon">⚠️</span>
         <span class="toast-message" id="toast-message"></span>
         <button class="toast-close" id="toast-close">&times;</button>

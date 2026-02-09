@@ -739,15 +739,11 @@
    MOBILE STREAMING STYLES
    =========================================== */
 
-@media (max-width: 768px) {
+@media (min-width: 360px) {
     .streaming-message {
         max-width: 90%;
     }
-    
-    .streaming-bubble {
-        padding: 10px 14px;
-    }
-    
+
     .streaming-progress {
         height: 2px;
     }

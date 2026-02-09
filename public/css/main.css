@@ -29,6 +29,7 @@
 @import 'components/_streaming.css';
 @import 'components/_tool-calls.css';
 @import 'components/_chat-input.css';
+@import 'components/_chat-footer.css';
 @import 'components/_loading-overlay.css';
 @import 'components/_toast.css';
 
@@ -41,4 +42,3 @@
 @import '_responsive.css';
 @import '_accessibility.css';
 @import '_dark-mode.css';
-
